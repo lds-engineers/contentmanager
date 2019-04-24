@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <!-- loading navbar -->
+    	{{ include('inc/navbar.html.twig') }}
+        <!-- loading all content from template body  -->
+        {% block body %}{% endblock %}
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/popper.min.js"></script>
+        <script type="text/javascript" src="/js/custom.js"></script>
+        <!-- loading all JS from template  -->
+        {% block javascripts %}{% endblock %}
+    </body>
+
+</html>

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Content manager{% endblock %}
+
+{% block body %}
+<div class="container">
+	<div class="card border-primary mb-12" >
+	  <div class="card-header ">New Content</div>
+	  <div class="card-body">
+    <div class="error-container"></div>
+
+<!-- add content form  -->
+<form id="form_newcontent">
+  <fieldset>
+    <legend>New content Form</legend>
+    <div class="form-group">
+      <label for="contenttitle">Title</label>
+      <input type="text" class="form-control" id="contenttitle" required name="contenttitle" placeholder="Enter Title">
+    </div>
+    <div class="form-group">
+      <label for="contentdescription">Descdription</label>
+      <input type="text" class="form-control" id="contentdescription" required name="contentdescription" placeholder="Enter Description">
+    </div>
+    <div class="form-group">
+      <label for="contentemail">Email</label>
+      <input type="email" class="form-control" id="contentemail" required name="contentemail" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="contentdata">Example textarea</label>
+      <textarea class="form-control" id="contentdata" name="contentdata" required rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-warning">Reset</button>
+  </fieldset>
+</form>
+	  </div>
+	</div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
